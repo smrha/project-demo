@@ -1,15 +1,31 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>{% block title %}{% endblock %}</title>
-    <link href="{% static "css/blog.css" %}" rel="stylesheet">
-  </head>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Clean Blog - {% block title %}{% endblock %}</title>
+    {% include 'blog/style.html' %}
+</head>
+
   <body>
-    <div id="content">{% block content %} {% endblock %}</div>
-    <div id="sidebar">
-      <h2>My blog</h2>
-      <p>This is my blog.</p>
-    </div>
+    {% include 'blog/navigation.html '%}
+
+    {% include 'blog/header.html' %}
+
+    {% block content %}
+
+    {% endblock %}
+
+    <hr />
+
+    {% include 'blog/footer.html' %}
+
+    {% include 'blog/script.html' %}
   </body>
 </html>
