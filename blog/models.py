@@ -39,3 +39,7 @@ class Post(models.Model):
                     self.publish.day,
                     self.slug])
 
+    # Return fullname of post author
+    def get_author(self):
+        return f"{self.author.first_name} {self.author.last_name}"
+
