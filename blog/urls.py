@@ -4,8 +4,9 @@ from . import views
 app_name = 'post'
 
 urlpatterns = [
-    path('', views.post_list, name="post_list"),
+    path('', views.post_list, name='post_list'),
     path('<int:year>/<int:month>/<int:day>/<slug:post>',
             views.post_detail,
-            name='post_detail')
+            name='post_detail'),
+    path('share/<int:post_id>/', views.post_share, name='post_share'),
 ]
