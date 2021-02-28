@@ -346,23 +346,10 @@
       {% include "administrator/sidebar.html" %}
 
       <div id="main-content">
-        <div class="block-header">
-          <div class="row clearfix">
-            <div class="col-md-6 col-sm-12">
-              <h1>داشبورد</h1>
-              {% block navigation %}
-                
-              {% endblock %}
-            </div>
-          </div>
-        </div>
-
-        <div class="container-fluid">
-          {% block content %}
-
-          {% endblock %}          
-        </div>
-      </div>
+        {% block content %}
+        
+        {% endblock %}
+      </div> 
     </div>
 
     {% include "administrator/script.html" %}
