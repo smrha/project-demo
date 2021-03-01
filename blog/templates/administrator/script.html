@@ -1,8 +1,21 @@
 {% load static %}
-<!-- Javascript -->
-<script src="{% static 'admin/assets/bundles/libscripts.bundle.js' %}"></script>
-<script src="{% static 'admin/assets/bundles/vendorscripts.bundle.js' %}"></script>
+<!-- BEGIN: Vendor JS-->
+<script src="{% static 'admin/assets/vendors/js/vendors.min.js' %}"></script>
+<script src="{% static 'admin/assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.min.js' %}"></script>
+<script src="{% static 'admin/assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js' %}"></script>
+<script src="{% static 'admin/assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js' %}"></script>
+<!-- BEGIN Vendor JS-->
 
-<script src="{% static 'admin/assets/vendor/toastr/toastr.js' %}"></script>
+<!-- BEGIN: Page Vendor JS-->
+<script src="{% static 'admin/assets/vendors/js/charts/apexcharts.min.js' %}"></script>
+<script src="{% static 'admin/assets/vendors/js/extensions/dragula.min.js' %}"></script>
+<!-- END: Page Vendor JS-->
 
-<script src="{% static 'admin/assets/bundles/mainscripts.bundle.js' %}"></script>
+<!-- BEGIN: Theme JS-->
+<script src="{% static 'admin/assets/js/scripts/configs/vertical-menu-dark.js' %}"></script>
+<script src="{% static 'admin/assets/js/core/app-menu.js' %}"></script>
+<script src="{% static 'admin/assets/js/core/app.js' %}"></script>
+<script src="{% static 'admin/assets/js/scripts/components.js' %}"></script>
+<script src="{% static 'admin/assets/js/scripts/footer.js' %}"></script>
+<script src="{% static 'admin/assets/js/scripts/customizer.js' %}"></script>
+<!-- END: Theme JS-->

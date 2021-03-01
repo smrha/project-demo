@@ -1,360 +1,39 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html class="loading" lang="fa" data-textdirection="rtl" dir="rtl">
+  <!-- BEGIN: Head-->
   <head>
-    <title>برگو | {% block title %}{% endblock %}</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta
-      name="description"
-      content="Brego Bootstrap 4x admin is super flexible, powerful, clean &amp; modern responsive admin dashboard with unlimited possibilities."
-    />
-    <meta name="author" content="GetBootstrap, design by: puffintheme.com" />
-
-    <link
-      rel="icon"
-      href="{% static 'admin/assets/images/favicon.png' %}"
-      type="image/x-icon"
-    />
-
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>قالب پنل مدیریت Frest</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'admin/assets/images/ico/favicon.ico' %}">
+	  <meta name="theme-color" content="#5A8DEE">
+    
     {% include "administrator/style.html" %}
-    {% block style %}
+
+    {% block style %}{% endblock %}
+
+  </head>
+  <!-- END: Head-->
+
+  <!-- BEGIN: Body-->
+  <body class="vertical-layout vertical-menu-modern dark-layout 2-columns  navbar-sticky footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="dark-layout">
+
+    {% include "administrator/navbar.html" %}
+
+    {% include "administrator/sidebar.html" %}
+
+    {% block content %}
 
     {% endblock %}
-  </head>
-  <body class="theme-blush">
-    <!-- Page Loader -->
-    <div class="page-loader-wrapper">
-      <div class="loader">
-        <div class="m-t-30">
-          <img
-            src="{% static 'admin/assets/images/icon.svg' %}"
-            width="40"
-            height="40"
-            alt="Brego"
-          />
-        </div>
-        <p>لطفا صبر کنید...</p>
-      </div>
-    </div>
 
-    <!-- Overlay For Sidebars -->
-    <div class="overlay"></div>
-
-    <div id="wrapper">
-      {% include "administrator/navbar.html" %}
-
-      <div id="megamenu" class="megamenu particles_js">
-        <button class="megamenu_toggle btn btn-danger">
-          <i class="icon-close"></i>
-        </button>
-        <div class="container">
-          <div class="row clearfix">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="mega-card">
-                <h6 class="title">تنظیمات عمومی</h6>
-                <ul class="setting-list list-unstyled mb-0">
-                  <li>
-                    <label class="switch">
-                      <input type="checkbox" />
-                      <span class="slider round"></span>
-                    </label>
-                    <span>هرکسی مرا دنبال کند</span>
-                  </li>
-                  <li>
-                    <label class="switch">
-                      <input type="checkbox" checked />
-                      <span class="slider round"></span>
-                    </label>
-                    <span>ایمیل تغییر مسیر</span>
-                  </li>
-                  <li>
-                    <label class="switch">
-                      <input type="checkbox" checked />
-                      <span class="slider round"></span>
-                    </label>
-                    <span>اطلاعیه</span>
-                  </li>
-                  <li>
-                    <label class="switch">
-                      <input type="checkbox" />
-                      <span class="slider round"></span>
-                    </label>
-                    <span>به روز رسانی خودکار</span>
-                  </li>
-                  <li>
-                    <label class="switch">
-                      <input type="checkbox" checked />
-                      <span class="slider round"></span>
-                    </label>
-                    <span>آفلاین</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="mega-card">
-                <h6 class="title">لینک سریع</h6>
-                <ul class="guick_link">
-                  <li><a href="#" title="">خانه</a></li>
-                  <li><a href="#" title="">درباره ما</a></li>
-                  <li><a href="#" title="">سوالات متداول</a></li>
-                  <li><a href="#" title="">حریم خصوصی</a></li>
-                  <li><a href="#" title="">نقشه سایت</a></li>
-                  <li><a href="#" title="">تماس با ما</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="mega-card">
-                <h6 class="title">تماس با ما</h6>
-                <form>
-                  <div class="input-group mb-2">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="نام را وارد کنید"
-                    />
-                  </div>
-                  <div class="input-group mb-2">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="ایمیل را وارد کنید"
-                    />
-                  </div>
-                  <div class="input-group mb-2">
-                    <textarea
-                      class="form-control"
-                      placeholder="پیام"
-                      rows="2"
-                    ></textarea>
-                  </div>
-                  <button type="button" class="btn btn-primary btn-round">
-                    تایید
-                  </button>
-                </form>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="mega-card">
-                <h6 class="title">گالری تصویر</h6>
-                <div
-                  id="carouselExampleControls"
-                  class="carousel slide"
-                  data-ride="carousel"
-                >
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img
-                        class="d-block w-100"
-                        src="https://via.placeholder.com/1024x640"
-                        alt="First slide"
-                      />
-                    </div>
-                    <div class="carousel-item">
-                      <img
-                        class="d-block w-100"
-                        src="https://via.placeholder.com/1024x640"
-                        alt="Second slide"
-                      />
-                    </div>
-                    <div class="carousel-item">
-                      <img
-                        class="d-block w-100"
-                        src="https://via.placeholder.com/1024x640"
-                        alt="Third slide"
-                      />
-                    </div>
-                  </div>
-                  <a
-                    class="carousel-control-prev"
-                    href="#carouselExampleControls"
-                    role="button"
-                    data-slide="prev"
-                  >
-                    <span
-                      class="carousel-control-prev-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span class="sr-only">قبلی</span>
-                  </a>
-                  <a
-                    class="carousel-control-next"
-                    href="#carouselExampleControls"
-                    role="button"
-                    data-slide="next"
-                  >
-                    <span
-                      class="carousel-control-next-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span class="sr-only">بعدی</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row clearfix">
-            <div class="card mt-4">
-              <div class="header">
-                <h2>سوالات متداول</h2>
-                <ul class="header-dropdown dropdown">
-                  <li>
-                    <a href="javascript:void(0);" class="full-screen"
-                      ><i class="icon-frame"></i
-                    ></a>
-                  </li>
-                  <li class="dropdown">
-                    <a
-                      href="javascript:void(0);"
-                      class="dropdown-toggle"
-                      data-toggle="dropdown"
-                      role="button"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    ></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="javascript:void(0);">اقدام</a></li>
-                      <li><a href="javascript:void(0);">دیگر اقدام</a></li>
-                      <li><a href="javascript:void(0);">یک چیز دیگر</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              <div class="body">
-                <div class="accordion" id="accordion-faqs">
-                  <div>
-                    <div class="card-header" id="headingOne">
-                      <h5 class="mb-0">
-                        <button
-                          class="btn btn-link"
-                          type="button"
-                          data-toggle="collapse"
-                          data-target="#collapseOne-faqs"
-                          aria-expanded="true"
-                          aria-controls="collapseOne"
-                        >
-                          س: نحوه استفاده از متغیرهای SCSS برای ساخت رنگ سفارشی
-                          <span class="float-right badge badge-primary"
-                            >23</span
-                          >
-                        </button>
-                      </h5>
-                    </div>
-                    <div
-                      id="collapseOne-faqs"
-                      class="collapse show"
-                      aria-labelledby="headingOne"
-                      data-parent="#accordion-faqs"
-                    >
-                      <div class="card-body">
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
-                        چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون
-                        بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و
-                        برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با
-                        هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت
-                        و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و
-                        متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را
-                        برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ
-                        پیشرو در زبان فارسی ایجاد کرد.
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="card-header" id="headingTwo">
-                      <h5 class="mb-0">
-                        <button
-                          class="btn btn-link collapsed"
-                          type="button"
-                          data-toggle="collapse"
-                          data-target="#collapseTwo-faqs"
-                          aria-expanded="false"
-                          aria-controls="collapseTwo"
-                        >
-                          س: چهار سؤال درباره استراتژی DevOps شما چیست؟
-                          <span class="float-right badge badge-success">8</span>
-                        </button>
-                      </h5>
-                    </div>
-                    <div
-                      id="collapseTwo-faqs"
-                      class="collapse"
-                      aria-labelledby="headingTwo"
-                      data-parent="#accordion-faqs"
-                    >
-                      <div class="card-body">
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
-                        چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون
-                        بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و
-                        برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با
-                        هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت
-                        و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و
-                        متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را
-                        برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ
-                        پیشرو در زبان فارسی ایجاد کرد.
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="card-header" id="headingThree">
-                      <h5 class="mb-0">
-                        <button
-                          class="btn btn-link collapsed"
-                          type="button"
-                          data-toggle="collapse"
-                          data-target="#collapseThree-faqs"
-                          aria-expanded="false"
-                          aria-controls="collapseThree"
-                        >
-                          س: مقایسه مایکروسافت و مفاهیم برنامه نویسی کاربردی
-                          <span class="float-right badge badge-danger">13</span>
-                        </button>
-                      </h5>
-                    </div>
-                    <div
-                      id="collapseThree-faqs"
-                      class="collapse"
-                      aria-labelledby="headingThree"
-                      data-parent="#accordion-faqs"
-                    >
-                      <div class="card-body">
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
-                        چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون
-                        بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و
-                        برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با
-                        هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت
-                        و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و
-                        متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را
-                        برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ
-                        پیشرو در زبان فارسی ایجاد کرد.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="particles-js"></div>
-      </div>
-
-      {% include "administrator/sidebar.html" %}
-
-      <div id="main-content">
-        {% block content %}
-        
-        {% endblock %}
-      </div> 
-    </div>
+    {% include "administrator/footer.html" %}
 
     {% include "administrator/script.html" %}
-    {% block script %}
 
-    {% endblock %}
+    {% block script %}{% endblock %}
+
   </body>
+  <!-- END: Body-->
 </html>

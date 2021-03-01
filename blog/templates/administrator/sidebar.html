@@ -1,79 +1,30 @@
 {% load static %}
-<div id="left-sidebar" class="sidebar">
-  <div class="navbar-brand">
-    <a href="index.html"
-      ><img
-        src="{% static 'admin/assets/images/icon.svg' %}"
-        alt="Brego Logo"
-        class="img-fluid logo"
-      /><span>برگو</span></a
-    >
-    <button type="button" class="btn-toggle-offcanvas btn btn-sm float-right">
-      <i class="lnr lnr-menu fa fa-chevron-circle-left"></i>
-    </button>
+<!-- BEGIN: Main Menu-->
+<div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
+  <div class="navbar-header">
+    <ul class="nav navbar-nav flex-row">
+      <li class="nav-item mr-auto"><a class="navbar-brand" href="{% static 'admin/html/vertical-menu-template-dark/index.html' %}">
+          <div class="brand-logo"><img class="logo" src="{% static 'admin/assets/images/logo/logo.png' %}"></div>
+          <h2 class="brand-text mb-0">Frest</h2></a></li>
+      <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="bx bx-x d-block d-xl-none font-medium-4 primary"></i><i class="toggle-icon bx bx-disc font-medium-4 d-none d-xl-block primary" data-ticon="bx-disc"></i></a></li>
+    </ul>
   </div>
-  <div class="sidebar-scroll">
-    <div class="user-account">
-      <div class="user_div">
-        <img
-          src="https://via.placeholder.com/140x140"
-          class="user-photo"
-          alt="User Profile Picture"
-        />
-      </div>
-      <div class="dropdown">
-        <span>خوش آمديد،</span>
-        <a
-          href="javascript:void(0);"
-          class="dropdown-toggle user-name"
-          data-toggle="dropdown"
-          ><strong>آرش خادملو</strong></a
-        >
-        <ul class="dropdown-menu dropdown-menu-right account vivify flipInY">
-          <li>
-            <a href="page-profile.html"><i class="icon-user"></i>پروفایل من</a>
+  <div class="shadow-bottom"></div>
+  <div class="main-menu-content">
+    <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation" data-icon-style="lines">
+      <li class=" navigation-header"><span>برنامه ها</span>
+      </li>
+      <li class=" nav-item"><a href="app-email.html"><i class="menu-livicon" data-icon="envelope-pull"></i><span class="menu-title" data-i18n="Email">ایمیل</span></a>
+      </li>
+      <li class=" nav-item"><a href="#"><i class="menu-livicon" data-icon="notebook"></i><span class="menu-title" data-i18n="Invoice">صورتحساب</span></a>
+        <ul class="menu-content">
+          <li><a href="app-invoice-list.html"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">لیست صورتحساب ها</span></a>
           </li>
-          <li>
-            <a href="app-inbox.html"><i class="icon-envelope-open"></i>پیام</a>
-          </li>
-          <li>
-            <a href="javascript:void(0);"
-              ><i class="icon-settings"></i>تنظیمات</a
-            >
-          </li>
-          <li class="divider"></li>
-          <li>
-            <a href="page-login.html"><i class="icon-power"></i>خروج</a>
+          <li><a href="app-invoice.html"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice">صورتحساب</span></a>
           </li>
         </ul>
-      </div>
-      <button class="btn btn-sm btn-block btn-primary btn-round mt-3" title="">
-        <i class="icon-plus mr-1"></i> ایجاد جدید
-      </button>
-    </div>
-    <nav id="left-sidebar-nav" class="sidebar-nav">
-      <ul id="main-menu" class="metismenu">
-        <li class="header">اصلی</li>
-        <li class="active">
-          <a href="#Dashboard" class="has-arrow"
-            ><i class="icon-speedometer"></i><span>داشبورد</span></a
-          >
-          <ul>
-            <li class="active"><a href="index.html">نسخه روشن</a></li>
-          </ul>
-        </li>
-        
-        <li class="header">عناصر رابط کاربری</li>
-        <li>
-          <a href="#uiElements" class="has-arrow"
-            ><i class="icon-diamond"></i><span>کامپونت ها</span></a
-          >
-          <ul>
-            <li><a href="ui-helper-class.html">کلاس های کمکی</a></li>
-            <li><a href="ui-bootstrap.html">رابط کاربری بوت استرپ</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+      </li>      
+    </ul>
   </div>
 </div>
+<!-- END: Main Menu-->
