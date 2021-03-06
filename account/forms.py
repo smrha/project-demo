@@ -2,6 +2,19 @@ from django import forms
 from django.contrib.auth.models import User
 from .models import Profile
 
+class UserLoginForm(forms.Form):
+    username = forms.CharField(
+        label = 'نام کاربری',
+        widget = forms.TextInput(attrs = {
+            'class': 'form-control'
+        }))
+
+    password = forms.CharField(
+        label = 'رمز عبور',
+        widget = forms.PasswordInput(attrs = {
+            'class': 'form-control'
+        }))
+
 class UserEditForm(forms.ModelForm):
     first_name = forms.CharField(
         label ='نام',
