@@ -60,6 +60,7 @@ class ProfileEditForm(forms.ModelForm):
         label ='تاریخ تولد',
         widget = forms.DateInput(attrs = {
             'class': 'form-control',
+            'type': 'hidden',
             'placeholder': ''
         }))
 

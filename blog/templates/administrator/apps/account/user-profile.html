@@ -105,10 +105,11 @@
                               <div class="input-group-prepend">
                                 <span class="input-group-text">{{ profile_form.birthday.label }}</span>
                               </div>
+                              <input type="text" id="input_birthday" class="form-control">
                               {{ profile_form.birthday }}
                             </div>
                         </div>
-                        <div class="col-lg-4 mb-1">
+                        <div class="col-lg-8 mb-1">
                             <div class="input-group">
                               <div class="input-group-prepend">
                                 <span class="input-group-text">{{ profile_form.address.label }}</span>
@@ -143,6 +144,15 @@
 {% block script %}
 <!-- BEGIN: Page JS-->
 <script src="{% static 'admin/assets/js/scripts/pages/page-user-profile.js' %}"></script>
+<script src="{% static 'admin/assets/js/scripts/PersianDatepicker/jquery.md.bootstrap.datetimepicker.js' %}"></script>
+<script type="text/javascript">
+  $("#input_birthday").MdPersianDateTimePicker({
+    targetDateSelector: "#id_birthday",
+    targetTextSelector: "#input_birthday",
+    dateFormat: "yyyy-MM-dd",
+    textFormat: " dddd dd MMMM yyyy ",
+  });
+</script>
 <!-- END: Page JS-->
 {% endblock %}
     
