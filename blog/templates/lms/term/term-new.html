@@ -1,0 +1,115 @@
+{% extends "administrator/base.html" %}
+{% load static %}
+
+{% block style %}
+<!-- BEGIN: Page CSS-->
+<link rel="stylesheet" type="text/css" href="{% static 'admin/assets/css/core/menu/menu-types/vertical-menu.css' %}">
+<!-- END: Page CSS-->
+{% endblock %}
+
+{% block content %}
+<!-- BEGIN: Content-->
+    <div class="app-content content">
+      <div class="content-overlay"></div>
+      <div class="content-wrapper">
+        <div class="content-header row">
+        </div>
+        <div class="content-body">
+          <!-- content Start -->
+          <section>
+            <div class="row">
+              <div class="col-md-12 col-sm-12">
+                <div class="card">
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <h4 class="card-title">ترم جدید</h4>
+                    <i class="bx bx-dots-vertical-rounded font-medium-3 cursor-pointer"></i>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-body pb-1">
+                      <form class="form form-horizontal" method="POST">
+                        {% csrf_token %}
+                        <div class="form-body">
+                          <div class="row">
+                            <div class="col-lg-4 mb-1">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">{{ form.name.label }}</span>
+                                </div>
+                                {{ form.name }}
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-4 mb-1">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">{{ form.begin_date.label }}</span>
+                                </div>
+                                <input type="text" id="input_begin_date" class="form-control">
+                                {{ form.begin_date }}
+                              </div>
+                            </div>
+                            <div class="col-lg-4 mb-1">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">{{ form.end_date.label }}</span>
+                                </div>
+                                <input type="text" id="input_end_date" class="form-control">
+                                {{ form.end_date }}
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-4 mb-1">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">{{ form.status.label }}</span>
+                                </div>
+                                {{ form.status }}
+                              </div>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="row">
+                            <div class="col-sm-12 d-flex">
+                              <button type="submit" class="btn btn-primary mr-1 mb-1">ثبت</button>
+                              <button type="reset" class="btn btn-light-secondary mr-1 mb-1">بازنشانی</button>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+          <!-- content end -->
+
+        </div>
+      </div>
+    </div>
+    <!-- END: Content-->
+{% endblock %}
+
+{% block script %}
+<!-- BEGIN: Page JS-->
+<script src="{% static 'admin/assets/js/scripts/PersianDatepicker/jquery.md.bootstrap.datetimepicker.js' %}"></script>
+<script type="text/javascript">
+  $("#input_begin_date").MdPersianDateTimePicker({
+    targetDateSelector: "#id_begin_date",
+    targetTextSelector: "#input_begin_date",
+    dateFormat: "yyyy-MM-dd",
+    textFormat: " dddd dd MMMM yyyy ",
+  });
+  $("#input_end_date").MdPersianDateTimePicker({
+    targetDateSelector: "#id_end_date",
+    targetTextSelector: "#input_end_date",
+    dateFormat: "yyyy-MM-dd",
+    textFormat: " dddd dd MMMM yyyy ",
+  });
+</script>
+<!-- END: Page JS-->
+{% endblock %}
+    

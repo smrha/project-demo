@@ -1,0 +1,87 @@
+{% extends "administrator/base.html" %}
+{% load static %}
+
+{% block style %}
+<!-- BEGIN: Page CSS-->
+<link rel="stylesheet" type="text/css" href="{% static 'admin/assets/css/core/menu/menu-types/vertical-menu.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'admin/assets/vendors/css/tables/datatable/datatables.min.css' %}">
+<!-- END: Page CSS-->
+{% endblock %}
+
+{% block content %}
+<!-- BEGIN: Content-->
+    <div class="app-content content">
+      <div class="content-overlay"></div>
+      <div class="content-wrapper">
+        <div class="content-header row">
+        </div>
+        <div class="content-body">
+          <!-- content Start -->
+          <section>
+            <div class="row">
+              <div class="col-md-12 col-sm-12">
+                <div class="card">
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <h4 class="card-title">لیست ترم ها</h4>
+                    <i class="bx bx-dots-vertical-rounded font-medium-3 cursor-pointer"></i>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-body">
+                      <div class="table-responsive">
+                        <table class="table zero-configuration">
+                          <thead>
+                            <tr>
+                              <th>ردیف</th>
+                              <th>عنوان ترم</th>
+                              <th>تاریخ آغاز</th>
+                              <th>تاریخ پایان</th>
+                              <th>وضعیت</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              {% for term in terms %}
+                              <td>{{ term.id }}</td>
+                              <td>{{ term.name }}</td>
+                              <td>{{ term.begin_date_jalali }}</td>
+                              <td>{{ term.end_date_jalali }}</td>
+                              <td>{{ term.term_status }}</td>
+                              {% endfor %}
+                            </tr>
+                          </tbody>
+                          <tfoot>
+                            <tr>
+                              <th>ردیف</th>
+                              <th>عنوان ترم</th>
+                              <th>تاریخ آغاز</th>
+                              <th>تاریخ پایان</th>
+                              <th>وضعیت</th>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+          <!-- content end -->
+
+        </div>
+      </div>
+    </div>
+    <!-- END: Content-->
+{% endblock %}
+
+{% block script %}
+<!-- BEGIN: Page JS-->
+<script src="{% static 'admin/assets/vendors/js/tables/datatable/datatables.min.js' %}"></script>
+<script src="{% static 'admin/assets/vendors/js/tables/datatable/dataTables.bootstrap4.min.js' %}"></script>
+<script src="{% static 'admin/assets/vendors/js/tables/datatable/dataTables.buttons.min.js' %}"></script>
+
+<script src="{% static 'admin/assets/js/scripts/datatables/datatable.js' %}"></script>
+<!-- END: Page JS-->
+{% endblock %}
+    

@@ -1,0 +1,51 @@
+{% extends "administrator/base.html" %}
+{% load static %}
+
+{% block style %}
+<!-- BEGIN: Page CSS-->
+<link rel="stylesheet" type="text/css" href="{% static 'admin/assets/css/core/menu/menu-types/vertical-menu.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'admin/assets/css/pages/dashboard-analytics.css' %}">
+<!-- END: Page CSS-->
+{% endblock %}
+
+{% block content %}
+<!-- BEGIN: Content-->
+    <div class="app-content content">
+      <div class="content-overlay"></div>
+      <div class="content-wrapper">
+        <div class="content-header row">
+        </div>
+        <div class="content-body">
+          <!-- content Start -->
+          <section>
+            <div class="row">
+              <div class="col-md-12 col-sm-12">
+                <div class="card">
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <h4 class="card-title">مدیریت محتوای آموزشی</h4>
+                    <i class="bx bx-dots-vertical-rounded font-medium-3 cursor-pointer"></i>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-body pb-1">
+                      
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+          <!-- content end -->
+
+        </div>
+      </div>
+    </div>
+    <!-- END: Content-->
+{% endblock %}
+
+{% block script %}
+<!-- BEGIN: Page JS-->
+<script src="{% static 'admin/assets/js/scripts/pages/dashboard-analytics.js' %}"></script>
+<!-- END: Page JS-->
+{% endblock %}
+    
