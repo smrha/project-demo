@@ -40,7 +40,10 @@ INSTALLED_APPS = [
 
     'administrator.apps.AdministratorConfig',
     'account.apps.AccountConfig',
+    'lms.apps.LmsConfig',
     'blog.apps.BlogConfig',
+
+    'extentions'
 ]
 
 MIDDLEWARE = [
